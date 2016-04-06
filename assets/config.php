@@ -3,13 +3,19 @@ return
 	array(
 	
 	// CMS site ID
-	'siteID' => '47896',//'32864',
+	'siteID' => '17200',
 	
 	'dev' => 'new',
 
 	// Fonts
-	'typekitID' => '',//'xib8icl',
-	
+	'typekitID' => 'avf1dgg',
+
+    // Masthead    
+    'siteNameHeader'=>'<b class="u-Masthead__siteName--line1"><b class="u-Masthead__siteName--line1a">The <br />Environmental<br /> Cooperative</b><b class="u-Masthead__siteName--line1b">at the Vassar Barns</b></b>',
+
+    // Slideshow
+    'layoutHeaderPost' => 'gallery:embed:homepage',
+
 	//'useLocalNav' => true,
 		
 	//'phpErrorReporting' => E_ALL,

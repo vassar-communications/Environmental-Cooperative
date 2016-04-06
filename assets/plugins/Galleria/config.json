@@ -1,0 +1,15 @@
+
+
+[{
+ "galleryHome" : "",
+"id" : "homepage",
+"idleMode" : false,
+"imageCrop" : false,
+"modal" : false,
+"thumbnails" : false,
+"showImagenav" : true,
+"showCounter" : true,
+"showInfo" : true,
+"slidesLocation" : "",
+"height" : "1\/1.4","theme" : "blank","showInfo" : false,"autoplay" : "5000","showImagenav" : false,"transition" : "fade","showCounter" : false,"transitionSpeed" : "5000","imageCrop" : "landscape",
+"slides" : [{"description" : "", "title" : "", "url" : "/assets/images/slideshow/Chicory-4-PC-Ellie-Opdahl.jpg"},{"description" : "", "title" : "", "url" : "/assets/images/slideshow/Copy-of-Copy-of-DSCN3676-PC-Ellie-Opdahl.jpg"},{"description" : "", "title" : "", "url" : "/assets/images/slideshow/American-Toad-PC-Taylor-Crowl.jpg"},{"description" : "", "title" : "", "url" : "/assets/images/slideshow/Common-Milkweed-PC-Taylor-Crowl.jpg"},{"description" : "", "title" : "", "url" : "/assets/images/slideshow/DSC_0114-PC-Tim-Boycott.jpg"},{"description" : "", "title" : "", "url" : "/assets/images/slideshow/DSCN3682-PC-Ellie-Opdahl.jpg"},{"description" : "", "title" : "", "url" : "/assets/images/slideshow/Goldenrod-6-PC-Ellie-Opdahl.jpg"},{"description" : "", "title" : "", "url" : "/assets/images/slideshow/Illustration-Workshop-PC-Ellie-Opdahl.jpg"},{"description" : "", "title" : "", "url" : "/assets/images/slideshow/Stream-Study-06-WG-34.jpg"},{"description" : "", "title" : "", "url" : "/assets/images/slideshow/Winterberry-3-PC-Ellie-Opdahl.jpg"}]}]
