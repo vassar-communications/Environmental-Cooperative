@@ -229,9 +229,9 @@ $u-Search__submit--bgColorHoverFocus: $linkColorHoverFocus;
 $u-Search__submit--bgColorActive: $linkColorActive;
 
 $u-Search__field--mobileBgColor: $lightBg;
-$u-Search__field--bgColor: transparent;
+$u-Search__field--bgColor: $lightBg;
 $mobileSearchBackgroundColor: $linkColor;
-$searchBackgroundColor: $lightBg;
+$searchBackgroundColor: transparent;
 
 $u-Search__field--font: $fontWeightNormal 1em $sans-serif;
 $u-Search__field--textColor: $fontColor;
