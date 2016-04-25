@@ -91,7 +91,7 @@ li {
 }
 .u-Masthead__siteName {
     margin-top: 3.5em;
-    font-size: 1em; 
+    font-size: 1.266em; 
     text-align: center;
 }
 .u-Masthead__siteName--line1a {
@@ -257,6 +257,12 @@ li {
  *	LAYOUT
  * ==============================
  */
+
+.Module--contact .Module__header,
+.u-pageHome .Module--contact {
+    display: none;
+    visibility: hidden;
+}
 @media screen {
     .u-lHeader {
         padding: 0;
@@ -303,6 +309,12 @@ li {
         text-align: center !important;
         right: 5% !important;
         width: 50% !important;
+    }
+    .u-pageInner .Module--contact {
+        margin: 2.5em 0 1.5em;
+    }
+    .u-pageHome .Module--contact .Module__name {
+        margin-top: 0;
     }
 }
 @media all and (min-width: $small) {
@@ -361,11 +373,9 @@ li {
         top: 12em;
     }
     /* end main layout */
-    .u-lContent {
-        float: left;
-    }
     .u-pageInner .u-lMain {
         margin-top: -7.5em;
+        min-height: 36em;
     }
 }
 @media all and (min-width: $medium) {
@@ -378,6 +388,7 @@ li {
     .galleria--homepage {
         width: 69%;
     }
+    .u-biosInner .u-lMain,
     .u-lMain {
         margin-left: 31%;
         width: 69%;
@@ -385,11 +396,21 @@ li {
     .u-lFooter {
         margin: 0 0 0 31%;
     }
+    .u-biosInner .u-NavSite,
     .u-NavSite {
         width: 31%;
     }
     .u-pageHome .u-Search {
         right: 25%;
+    }
+}
+@media all and (min-width: $large) {
+    .u-lContent {
+        float: left;
+        padding-right: 4%;
+    }
+    .u-lAside {
+        padding-left: 4%;
     }
 }
 @media all and (min-width: 68.75em) {
@@ -542,21 +563,25 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
         top: 0;
         left: 0;
         bottom: 0;
-        right: 62%;
-        background-color: $linkColor;
         border-right: 1px solid #9AAE88;
+        background-color: #799361;
         z-index: 1;
     }
     .u-Masthead__siteName {
-        background: transparent url(/environmentalcooperative/web/assets/images/css/envirocoop-acorn.png) no-repeat center 5%;
+        background: transparent url(/assets/images/css/envirocoop-acorn.png) no-repeat center 5%;
         background-size: 2.5em;
     }
     .u-lFooter {
-        background: transparent url(/environmentalcooperative/web/assets/images/css/envirocoop-logo.png) no-repeat center center;
+        background: transparent url(/assets/images/css/envirocoop-logo.png) no-repeat center center;
         background-size: 80%;
     }
     .icon-search svg {
         background-color: $linkColor;
+    }
+}
+@media screen and (min-width: $large) {
+    .u-lAside {
+        border-left: 1px solid #DBE4D3;
     }
 }
 @media screen and (min-width: $medium) {
