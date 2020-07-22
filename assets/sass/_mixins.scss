@@ -14,102 +14,46 @@
 			background: $active; } }
 }
 
-@mixin v-pixel-fallback ( $property, $rems, $keyword: null, $vertical-radius: false, $important: false ) {
+
+// Set all the colors for a link with one mixin call.
+// Order of arguments is:
+//
+// 1. normal
+// 2. hover
+// 3. active
+// 4. visited
+// 5. focus
+//
+// Those states not specified will inherit.
+// Mixin to an anchor link like so:
+//     a
+//       +link-colors(#00c, #0cc, #c0c, #ccc, #cc0)
+
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false, $important: null) {
 
 	@if $important {
-		$important : ' !important';
-	}
-	@else {
-		$important : '';
+		$important : !important;
 	}
 
-	@if $property == 'border-radius' {
-		@include border-radius(rem-to-pixel($rems));
-		@include border-radius($rems);
-	}
-
-	@elseif $property == 'font-size' {
-
-		@if $keyword {
-			#{$property}: unquote("$keyword#{$important}");
-		}
-		@else {
-			#{$property}: unquote("#{rem-to-pixel($rems, $keyword)}#{$important}");
-		}
-
-		#{$property}: #{$rems}#{$important};
-
-	}
-
-	@else {
-		#{$property}: unquote("#{rem-to-pixel($rems)}#{$important}");
-		#{$property}: #{$rems}#{$important};
-	}
-
-
-}
-
-@function calculate-pixels ( $rems ) {
-
-	@if type-of($rems) != 'number' {
-
-		// If there is more than one value, create a list and perform equations on each value
-
-		// Create an empty list that we can dump values into
-		$values: ();
-
-		@each $value in $rems {
-			$values: append($values, pixels($value) );
-		}
-
-		// Return the property and its list of converted values
-		@return $values;
-
-	}
-	@else {
-		@return pixels($rems);
-	}
-
-}
-
-@function rem-to-pixel ( $rems, $keyword: null ) {
-
-	@if $keyword {
-		@return $keyword
-	}
-	@else {
-		@return calculate-pixels($rems);
-	}
-
-}
-
-@function pixels ( $rems ) {
-
-	$base-font-multiplier : 1;
-	@if type-of($rems) != 'number' {
-		@return $rems;
-	}
-	@else {
-		@if $rems == 0 {
-			@return 0;
-		}
-		@elseif unit($rems) == 'rem' {
-			@return strip-units($rems) * $base-font-multiplier * 16px
-		}
-		@else {
-			@return $rems;
-		}
-	}
-
-}
-
-@function strip-units($number) {
-
-	@if type-of($number) != 'number' {
-		@return $number;
-	}
-	@else {
-		@return $number / ($number * 0 + 1);
-	}
-
+	color: $normal $important;
+	@if $visited {
+		&:visited {
+			color: $visited $important;
+        }
+    }
+	@if $focus {
+		&:focus {
+			color: $focus $important;
+        }
+    }
+	@if $hover {
+		&:hover {
+			color: $hover $important;
+        }
+    }
+	@if $active {
+		&:active {
+			color: $active $important;
+        }
+    }
 }

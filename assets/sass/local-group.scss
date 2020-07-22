@@ -1,5 +1,4 @@
 @import "_mixins";
-@import "compass";
 @import "_config";
 
 /* ==============================
@@ -576,9 +575,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
         background: transparent url(/assets/images/css/envirocoop-logo.png) no-repeat center center;
         background-size: 80%;
     }
+    /*
     .icon-search svg {
         background-color: $linkColor;
     }
+    */
+    
 }
 @media screen and (min-width: $large) {
     .u-lAside {
